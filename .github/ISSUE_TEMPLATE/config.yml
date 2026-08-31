@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/ddoug220/kyle-reese/security/advisories/new
+    about: Report vulnerabilities privately instead of opening a public issue.
+  - name: Support guide
+    url: https://github.com/ddoug220/kyle-reese/blob/main/SUPPORT.md
+    about: Prepare a minimal, non-sensitive reproduction before opening an issue.

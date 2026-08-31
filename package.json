@@ -1,0 +1,51 @@
+{
+  "name": "kyle-reese",
+  "version": "0.1.0",
+  "description": "Audit JavaScript and TypeScript complexity, then apply verified refactors.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": "./src/index.js",
+  "bin": {
+    "kyle-reese": "./src/cli.js"
+  },
+  "files": [
+    "src",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test",
+    "audit:self": "node ./src/cli.js audit .",
+    "test:package": "npm pack --dry-run",
+    "verify": "npm test && npm run audit:self && npm run test:package",
+    "prepublishOnly": "npm run verify"
+  },
+  "keywords": [
+    "complexity",
+    "cyclomatic-complexity",
+    "cognitive-complexity",
+    "halstead",
+    "typescript",
+    "code-quality",
+    "static-analysis"
+  ],
+  "author": "Daniel Douglas <danielmdouglas@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddoug220/kyle-reese.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ddoug220/kyle-reese/issues"
+  },
+  "homepage": "https://github.com/ddoug220/kyle-reese#readme",
+  "sideEffects": false,
+  "dependencies": {
+    "fast-glob": "^3.3.3",
+    "typescript": "^5.9.3"
+  }
+}

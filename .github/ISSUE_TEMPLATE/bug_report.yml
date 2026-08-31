@@ -1,0 +1,70 @@
+name: Bug report
+description: Report an incorrect metric, crash, unsafe edit, or other reproducible failure.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Remove secrets and proprietary code before submitting a reproduction.
+  - type: input
+    id: version
+    attributes:
+      label: kyle-reese version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version
+      placeholder: 20.19.0
+    validations:
+      required: true
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating system
+      placeholder: macOS 15, Ubuntu 24.04, or Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include the smallest source file, config, and exact command that reproduces the problem.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include the relevant text or JSON output.
+    validations:
+      required: true
+  - type: dropdown
+    id: writes
+    attributes:
+      label: Did fix mode write files?
+      options:
+        - No, this was audit mode or a dry run
+        - Yes, and verification passed
+        - Yes, and verification failed
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: I removed secrets and proprietary code from this report.
+          required: true
+        - label: I searched existing issues for the same problem.
+          required: true

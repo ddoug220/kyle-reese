@@ -1,0 +1,21 @@
+{
+  "thresholds": {
+    "cyclomatic": 22,
+    "cognitive": 22,
+    "halsteadDifficulty": 80
+  },
+  "include": [
+    "src/**/*.{js,jsx,ts,tsx}"
+  ],
+  "exclude": [
+    "**/*.generated.ts",
+    "**/fixtures/**"
+  ],
+  "fix": {
+    "checkCommand": [
+      "npm",
+      "test"
+    ],
+    "maxPasses": 50
+  }
+}
