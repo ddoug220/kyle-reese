@@ -4,31 +4,14 @@
 [![Node.js 20+](https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-`kyle-reese` finds JavaScript and TypeScript functions that have grown too hard to reason about. It audits three function-level metrics and can apply a narrow set of verified refactors.
-
-The default health contract is:
-
-- cyclomatic complexity `< 22`;
-- cognitive complexity `< 22`;
-- Halstead difficulty `< 80`.
+Stop letting pre-Skynet machines pollute your codebase. `kyle-reese` is a relentless CLI tool designed to hunt down JavaScript and TypeScript functions that have grown too hard to reason about. It can't be bargained with. It can't be reasoned with. It doesn't feel pity, or remorse, or fear. And it absolutely will not stop, ever, until your code is free of slop. It audits three function-level metrics and can apply a narrow set of verified refactors.
 
 The limits are exclusive. A value of 22 fails a `< 22` limit.
 
-## Install from GitHub
-
-The package has not been published to npm yet. Install it directly from this repository:
-
-```sh
-npm install --save-dev github:ddoug220/kyle-reese
-```
-
-Run the first audit from your project root:
-
-```sh
-npx kyle-reese audit .
-```
-
-The command exits with `0` when every parsed function passes, `1` for metric or parse failures, and `2` for command or configuration errors.
+## Why use `kyle-reese`?
+- Zero Trust for Tech Com. If an LLM hallucinated a 40-line utility function to do .map() already does, Kyle will find it and mark it for termination.
+- Detects lazy pattern replication, excessive boilerplate and typical AI-generated fluff that inflates your bundle size.
+- Evaluates complexity and code readability to ensure your team isn't inheriting tech debt from a prompt-factory.
 
 ## Read the report
 
