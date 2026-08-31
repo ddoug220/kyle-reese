@@ -14,5 +14,9 @@ This project records user-visible changes in this file. Versions follow [Semanti
 - Configuration through `kyle-reese.config.json` and command-line overrides.
 - CLI and library interfaces.
 
+### Fixed
+
+- Prevented Dependabot from proposing TypeScript major versions that remove the compiler API required by the analyzer.
+
 [Unreleased]: https://github.com/ddoug220/kyle-reese/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/ddoug220/kyle-reese/releases/tag/v0.1.0
